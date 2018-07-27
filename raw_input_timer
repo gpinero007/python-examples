@@ -1,0 +1,8 @@
+import sys
+from select import select
+
+print ("Aplico los cambios (s/n)?")
+resp, _, _ = select([sys.stdin], [], [], 5)
+if resp:
+	if sys.stdin.readline()[:1] == "s":
+		print ("Aplico")
