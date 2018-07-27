@@ -1,3 +1,3 @@
 # python-examples
-Usefull sort python scripts notes
+Sort scripts in python
 
