@@ -1,0 +1,14 @@
+import sys
+from select import select
+
+def question_yn(texto = "Aplico la configuracion(s/n)?"):
+	""" question with timer 5s"""
+	print texto
+	resp, _, _ = select([sys.stdin], [], [], 5)
+	if resp:
+		if sys.stdin.readline()[:1] == "s":
+			return True
+	return False
+	
+if question_yn():
+	print "cambios aplicados"
